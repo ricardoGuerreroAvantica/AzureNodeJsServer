@@ -20,6 +20,8 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 app.use('/', routes);
 app.use('/users', users);
+// error handlers
+app.get('/', (req, res) => res.send('Hello World!'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -28,8 +30,6 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handlers
-app.get('/', (req, res) => res.send('Hello World!'))
 
 
 // development error handler
