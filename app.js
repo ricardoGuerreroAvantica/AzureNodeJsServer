@@ -29,6 +29,8 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
+app.get('/', (req, res) => res.send('Hello World!'))
+
 
 // development error handler
 // will print stacktrace
